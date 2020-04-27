@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    padding: 100px;
+    background-image: url('https://1.bp.blogspot.com/-KWfcpRzNAOE/Xc9yjx_0AsI/AAAAAAAAhLw/Y35vSh1jB6cL9epJJ2iyPV8pLLz6EsnfgCLcBGAsYHQ/s2560/mountains-lake-stones-evening-gm-2560x1440.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: beige;
+    padding: 50px;
+}
+
+form, div, button {
+    opacity: 0.0;
+}
