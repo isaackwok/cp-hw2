@@ -5,18 +5,18 @@ html
         link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", crossorigin="anonymous")
         link(rel="stylesheet", href="css/main.css")
     body
-        form(action="/login", method="post")
+        form(action="/addmember", method="post")
             div.form-group
                 label(for="inputUsername") Username
-                input#inputUsername.form-control(type="text", aria-describedby="usernameHelp", name="name")
+                input#inputUsername.form-control(type="text", aria-describedby="usernameHelp", name="name", required)
                 small#usernameHelp.form-text.text-muted Your username is usually your student ID.
             div.form-group
                 label(for="inputEmail") E-mail
-                input#inputEmail.form-control(type="email", name="email")
+                input#inputEmail.form-control(type="email", name="email", required)
             div.form-row
                 div.form-group.col-md-6
                     label(for="inputAge") Age
-                    input#inputAge.form-control(type="number", name="age")
+                    input#inputAge.form-control(type="number", name="age", value="0", required)
                 div.form-group.col-md-6
                     label(for="inputSex") Gender
                     select#inputSex.form-control(name="sex")
