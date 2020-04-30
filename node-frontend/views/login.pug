@@ -7,9 +7,8 @@ html
     body
         form(action="/addmember", method="post")
             div.form-group
-                label(for="inputUsername") Username
+                label(for="inputUsername") Name
                 input#inputUsername.form-control(type="text", aria-describedby="usernameHelp", name="name", required)
-                small#usernameHelp.form-text.text-muted Your username is usually your student ID.
             div.form-group
                 label(for="inputEmail") E-mail
                 input#inputEmail.form-control(type="email", name="email", required)

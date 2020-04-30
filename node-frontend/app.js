@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 app.post('/addmember', (req, res) => {
     queue(req);
     insertToDB(req);
-    res.render('login');
+    res.redirect('/');
 });
 
 app.listen(port, () => {
@@ -54,11 +54,7 @@ function queue(req) {
                 DataType: "String",
                 StringValue: `${req.body.email}`
             },
-            "Age": {
-                DataType: "Number",
-                StringValue: `${req.body.age}`
-            },
-            "Sex": {
+            "Gender": {
                 DataType: "String",
                 StringValue: `${req.body.sex}`
             },
@@ -80,8 +76,7 @@ function insertToDB(req) {
         Item: {
           'name' : {S: `${req.body.name}`},
           'email' : {S: `${req.body.email}`},
-          'age' : {N: `${req.body.age}`},
-          'sex' : {S: `${req.body.sex}`}
+          'gender' : {S: `${req.body.sex}`}
         }
       };
       
